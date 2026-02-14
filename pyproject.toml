@@ -1,0 +1,26 @@
+[project]
+name = "devterm-desktop"
+version = "1.0.0"
+description = "DevTerm Desktop - Desktop GUI application"
+authors = [{name = "DevTerm Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "customtkinter>=5.2.0",
+    "pyyaml>=6.0",
+    "toml>=0.10.2",
+    "xmltodict>=0.13.0",
+    "requests>=2.31.0",
+    "cryptography>=41.0.0",
+    "qrcode>=7.4.2",
+]
+
+[project.scripts]
+devterm-desktop = "devterm_desktop.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["devterm_desktop*"]
